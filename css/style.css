@@ -1,0 +1,447 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: #000;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .container {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 90vh;
+  }
+  
+  /* -------------------- */
+  
+  nav{
+    display: none;
+  }
+  
+  .logo{
+    margin: 0 auto;
+    display: block;
+  }
+  
+  #show{
+    height: 130vh;
+  }
+  
+  .top{
+    line-height: 1;
+    height: 90vh;
+  }
+  
+  .work,
+  .skill,
+  .profile{
+    padding: 50px 0;
+  }
+  
+  h2{
+    font-size: 2.1875em;
+    text-align: center;
+  }
+  
+  .ja{
+    font-size: 0.875em;
+    text-align: center;
+  }
+  
+  .t-caret{
+    margin-left: 1px;
+  }
+  
+  .content{
+    margin: 25px 0;
+  }
+  
+  .l-inner{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .l-flex{
+    display: flex;
+  }
+  
+  /* --------------------nav */
+  
+  .nav_btn{
+    position: relative;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .nav_btn span{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background: #fff;
+  }
+  
+  .nav_btn,
+  .nav_btn span{
+    display: inline-block;
+    transition: all .5s ease-out;
+    box-sizing: border-box;
+  }
+  
+  .nav_btn span:nth-of-type(1){
+    top: 6px;
+  }
+  
+  .nav_btn span:nth-of-type(2){
+    top: 18px;
+  }
+  
+  .nav_btn.active span:nth-of-type(1){
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .nav_btn.active span:nth-of-type(2){
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  
+  nav{
+    width: 100%;
+    padding: 65% 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    background: #000;
+    position: fixed;
+    top: 50%;
+    left: 150%;
+    transform: translate( -50%, -50%);
+    transition: all .5s ease-out;
+    z-index: 9;
+  }
+  
+  nav.active{
+    left: 50%;
+  }
+  
+  nav li{
+    margin: 30px 0;
+  }
+  
+  /* --------------------top */
+  
+  .top{
+    position: relative;
+  }
+  
+  .top img{
+    width: 62.666%;
+    max-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    display: block;
+  }
+  
+  .scroll{
+    width: 40px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+  }
+  
+  .scroll span{
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    animation: scroll 1s infinite;
+  }
+  
+  /* --------------------work */
+  
+  .work img{
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .workList{
+    height: 530px;
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+  
+  .workList li{
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .genre{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #5f5f5f;
+    opacity: 0;
+    position: absolute;
+    transition: .5s;
+  }
+  
+  .genre p{
+    margin: 23% 0;
+    padding: 20px 0;
+    font-size: 25px;
+    text-align: center;
+    color: #5f5f5f;
+    background: #fff;
+  }
+  
+  .show{
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 1.375em;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* --------------------skill */
+  
+  .skill p{
+    text-align: center;
+  }
+  
+  .skill .content p{
+    padding-top: 25px;
+    text-align: left;
+  }
+  
+  .big{
+    font-size: 1.875em;
+  }
+  
+  .medium{
+    font-size: 1.5625em;
+  }
+  
+  .small{
+    font-size: 1.25em;
+  }
+  
+  /* --------------------profile */
+  
+  .profile img{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    display: block;
+  }
+  
+  .name{
+    margin: 20px 0 50px;
+    font-size: 30px;
+  }
+  
+  .profile_size{
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .t_center{
+    text-align: center;
+  }
+  
+  .details{
+    margin-bottom: 50px;
+  }
+  
+  .sns{
+    margin-bottom: 70px;
+    justify-content: space-around;
+  }
+  
+  i{
+    font-size: 2.5em;
+    transition: .5s;
+  }
+  
+  small{
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  small p{
+    margin-bottom: 25px;
+  }
+  
+  /* --------------------single */
+  
+  .s-con{
+    margin: 50px 0 100px;
+  }
+  
+  .s-con h3{
+    margin: 50px 0 10px;
+  }
+  
+  .s-img img{
+    width: 100%;
+    margin: 50px 0 25px;
+  }
+  
+  .s-con p{
+    margin-bottom: 5px;
+    line-height: 2;
+  }
+  
+  .s-con a{
+    text-decoration: underline;
+  }
+  
+  /* -------------------- */
+  
+  @keyframes scroll {
+    0%{
+      top: 30%;
+      opacity: 1;
+    }
+    100%{
+      top: 70%;
+      opacity: .1;
+    }
+  }
+  
+  /* -------------------- */
+  
+  @media screen and (min-width:1000px){
+  
+    .pc-inner{
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .container {
+      height: 100vh;
+    }
+  
+    .top,
+    .work,
+    .skill,
+    .profile{
+      height: 100vh;
+    }
+  
+    .work,
+    .skill,
+    .profile{
+      padding: 100px 0;
+    }
+  
+    .content{
+      margin: 100px 0;
+    }
+  
+  
+    /* --------------------work */
+  
+    .workList{
+      margin-bottom: 50px;
+    }
+  
+    .workList ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .workList li{
+      width: 30%;
+    }
+  
+    .workList li img{
+      width: 100%;
+    }
+  
+    .genre:hover{
+      opacity: .8;
+    }
+  
+    .show{
+      display: none;
+    }
+  
+    /* --------------------skill */
+  
+    .skill .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .skill .content p{
+      padding-top: 40px;
+    }
+  
+    .program,
+    .software{
+      width: 30%;
+    }
+  
+    /* --------------------profile */
+  
+    .profile .content{
+      margin-bottom: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .profile img{
+      width: 15%;
+      height: 15%;
+      margin: 0;
+    }
+  
+    .me{
+      width: 30%;
+    }
+  
+    .sns{
+      margin: 0;
+    }
+  
+    i:hover{
+      color: #5f5f5f;
+    }
+  }
